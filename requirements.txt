@@ -1,0 +1,8 @@
+requests
+pandas
+numpy
+Flask
+ratelimit
+datetime
+argparse
+apscheduler

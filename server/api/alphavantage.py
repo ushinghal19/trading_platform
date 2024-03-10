@@ -1,4 +1,4 @@
-from server.api.config import *
+from .config import *
 import requests
 from ratelimit import limits, sleep_and_retry
 import pandas as pd

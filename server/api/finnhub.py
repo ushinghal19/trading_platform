@@ -1,4 +1,4 @@
-from server.api.config import FINNHUB_API_KEY, FINNHUB_BASE_URL
+from .config import FINNHUB_API_KEY, FINNHUB_BASE_URL
 import requests
 import pandas as pd
 from datetime import datetime
