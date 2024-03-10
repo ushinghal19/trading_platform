@@ -65,6 +65,10 @@ Here are some common comands to interact with the client:
 This project is a testament to my passion for fintech and my commitment to delivering high-quality software. I hope it meets your expectations and showcases the potential value I can bring to the OTPP team.
 I am open to feedback and looking forward to discussing the project in further detail.
 
+
+#### DEMO!
+https://github.com/ushinghal19/trading_platform/assets/56486015/ada34ca4-109f-452d-ab4f-d01c0432277f
+
 Warm regards,
 
 Utsav Shinghal :)
