@@ -6,7 +6,7 @@ I am truly grateful for this opportunity to participate in the Take-Home Assessm
 
 With additional time, I would have further refined the project by:
 - Employing Version Control best practices with frequent, well-documented commits.
-- Conducting comprehensive testing, including writing unit tests for all functions.
+- Conducting comprehensive testing, including writing unit tests for all functions and using mocks to emulate endpoints.
 - Observing the system in a live environment during trading hours to validate real-time data integration with Finnhub.
 
 The experience was immensely enjoyable, and I am thrilled to present my work to you.
