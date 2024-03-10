@@ -9,6 +9,11 @@ With additional time, I would have further refined the project by:
 - Conducting comprehensive testing, including writing unit tests for all functions and using mocks to emulate endpoints.
 - Observing the system in a live environment during trading hours to validate real-time data integration with Finnhub.
 
+One major issue I ran into was circular imports. I know it should be a pretty easy fix usually, but mine was really troublesome. I didn't want to have everything in the same directory
+because I wanted the structure to be organised, but I also wanted it to work. For some reason, it didn't allow me to use full import lines, and didn't recognize trading_platform as sources.root.
+When I have it set up like this, the client and server file run perfectly, but the tests don't. When I adjust the imports slightly, tests work and the server and client don't. If I had more time,
+I think I would've figured it out but honestly ate up so much of my time as it is anyway!
+
 The experience was immensely enjoyable, and I am thrilled to present my work to you.
 
 ## Project Structure
