@@ -1,8 +1,8 @@
 import pandas as pd
-from api.alphavantage import get_alphavantage_data
-from api.finnhub import get_finnhub_data
-from utils import calculate_historical_trading_signals, calculate_new_trading_signals
-
+from server.api.alphavantage import get_alphavantage_data
+from server.api.finnhub import get_finnhub_data
+from server.utils import calculate_historical_trading_signals, calculate_new_trading_signals
+import unittest.mock
 
 class Data:
     """ Object that represents current state of data """
@@ -29,7 +29,6 @@ class Data:
     def update_current_quote(self, ticker: str, interval: str) -> None:
         # Get new data for the ticker from Finnhub
         new_data_df = get_finnhub_data(ticker)
-
         # Check if new data's timestamp is after the last timestamp
         if not self.dataframe.empty and new_data_df.index[0] > self.dataframe.index[-1]:
             # Concatenate new data to the existing DataFrame
@@ -69,13 +68,3 @@ class Data:
     def get_dataframe(self):
         """ Used for CSV Generation. """
         return self.dataframe
-
-#
-# data = Data()
-# data.update_historical_data('AAPL', '60min')
-# data.update_historical_data('MSFT', interval='60min')
-# # data.update_current_quote('AAPL', '60min')
-# # data.update_current_quote('MSFT', '60min')
-# # data.dataframe.to_csv('data.csv')
-# data.get_data_for_datetime('2024-03-08T14:00:00')
-# # # print(data.dataframe)
