@@ -1,5 +1,5 @@
 import pandas as pd
-from server.data import Data
+from project1.server.data import Data
 from unittest import mock
 
 
