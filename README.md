@@ -14,6 +14,8 @@ With additional time, I would have further refined the project by:
 The experience was immensely enjoyable, and I am thrilled to present my work to you.
 
 ## Project Structure
+#### Input the API Keys to `server/api/config.py`
+
 The project is structured into two main components: `server` and `client`.
 
 ### Server
