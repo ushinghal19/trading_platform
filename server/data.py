@@ -1,8 +1,7 @@
 import pandas as pd
-from server.api.alphavantage import get_alphavantage_data
-from server.api.finnhub import get_finnhub_data
-from server.utils import calculate_historical_trading_signals, calculate_new_trading_signals
-import unittest.mock
+from api.alphavantage import get_alphavantage_data
+from api.finnhub import get_finnhub_data
+from utils import calculate_historical_trading_signals, calculate_new_trading_signals
 
 class Data:
     """ Object that represents current state of data """
