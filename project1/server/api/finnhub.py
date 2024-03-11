@@ -3,6 +3,7 @@ import requests
 import pandas as pd
 from datetime import datetime
 
+
 def process_finnhub_response(response_json: dict, symbol: str) -> pd.DataFrame:
     """ Process the data returned from Finnhub. """
     # Convert timestamp to datetime and create a DataFrame

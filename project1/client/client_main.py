@@ -2,15 +2,15 @@ import argparse
 import requests
 
 
-# Function to parse command line arguments for the client
 def parse_arguments():
+    """ Parses arguments from user. """
     parser = argparse.ArgumentParser(description='Client for querying the trading signals server.')
     parser.add_argument('--server', type=str, help='Server IP and port in the format ip:port', default='127.0.0.1:8000')
     return parser.parse_args()
 
 
-# Function to make a request to the server for latest data
 def get_latest_data(server, datetime):
+    """ Makes a request to the server for latest data"""
     response = requests.get(f'http://{server}/data/{datetime}')
     if response.ok:
         print(response.text)
@@ -18,8 +18,8 @@ def get_latest_data(server, datetime):
         print("Failed to retrieve data.")
 
 
-# Function to send a command to add a new ticker
 def add_ticker(server, ticker):
+    """ Sends a command to add a new ticker"""
     response = requests.post(f'http://{server}/add_ticker/{ticker}')
     if response.ok:
         print(response.json())
@@ -27,8 +27,8 @@ def add_ticker(server, ticker):
         print("Failed to add ticker.")
 
 
-# Function to send a command to delete a ticker
 def delete_ticker(server, ticker):
+    """ Sends a command to delete a ticker """
     response = requests.delete(f'http://{server}/delete_ticker/{ticker}')
     if response.ok:
         print(response.json())
@@ -36,8 +36,8 @@ def delete_ticker(server, ticker):
         print("Failed to delete ticker.")
 
 
-# Function to request the server to generate and download a report
 def download_report(server):
+    """ Requests the server to generate and download a report"""
     response = requests.get(f'http://{server}/report')
     if response.ok:
         with open('report.csv', 'wb') as file:
