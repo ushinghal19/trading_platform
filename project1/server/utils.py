@@ -24,7 +24,7 @@ def calculate_historical_trading_signals(df: pd.DataFrame, interval: str) -> pd.
 def calculate_new_trading_signals(df: pd.DataFrame, ticker: str, interval: str) -> pd.DataFrame:
     """Update trading signals and PnL for the last row in the DataFrame."""
     interval_minutes = int(interval[:-3])
-    window_size = ((60 // interval_minutes) * 24)  # Adjust according to your requirements
+    window_size = ((60 // interval_minutes) * 24)
 
     # Get only the part of the dataframe corresponding to the ticker
     ticker_df = df[df['ticker'] == ticker]

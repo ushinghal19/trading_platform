@@ -65,7 +65,6 @@ def add_ticker(ticker):
 def delete_ticker(ticker):
     if ticker in args.tickers:
         args.tickers.remove(ticker)
-        # You will also need to handle the removal of this ticker's data from your Data class
         data_storage.remove_ticker_data(ticker)
         return jsonify({'status': 'success', 'message': f'{ticker} successfully deleted! :)'})
     else:
