@@ -4,6 +4,8 @@ Hello OTPP Team 👋,
 
 I am truly grateful for this opportunity to participate in the Take-Home Assessment. This project was an exciting challenge that allowed me to showcase my abilities and potential. Although the time was limited, I wanted to demonstrate a breadth of skills and deliver a meaningful piece of work.
 
+
+# Project 1
 With additional time, I would have further refined the project by:
 - Employing Version Control best practices with frequent, well-documented commits.
 - Conducting comprehensive testing, including writing unit tests for all functions and using mocks to emulate endpoints.
@@ -68,6 +70,9 @@ I am open to feedback and looking forward to discussing the project in further d
 
 #### DEMO!
 https://github.com/ushinghal19/trading_platform/assets/56486015/ada34ca4-109f-452d-ab4f-d01c0432277f
+
+# Project 2: 
+See OTPP_Random_Forest.ipynb!
 
 Warm regards,
 
