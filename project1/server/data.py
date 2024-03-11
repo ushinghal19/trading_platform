@@ -3,6 +3,7 @@ from api.alphavantage import get_alphavantage_data
 from api.finnhub import get_finnhub_data
 from utils import calculate_historical_trading_signals, calculate_new_trading_signals
 
+
 class Data:
     """ Object that represents current state of data """
 
@@ -10,6 +11,7 @@ class Data:
         self.dataframe = pd.DataFrame()
 
     def update_historical_data(self, ticker: str, interval: str) -> None:
+        """ Adds historical data from Alphavantage. """
         # Get new data for the ticker
         df = get_alphavantage_data(ticker, interval)
         new_data = calculate_historical_trading_signals(df, interval)
@@ -26,6 +28,7 @@ class Data:
         return
 
     def update_current_quote(self, ticker: str, interval: str) -> None:
+        """ Updates new data from Finnhub. """
         # Get new data for the ticker from Finnhub
         new_data_df = get_finnhub_data(ticker)
         # Check if new data's timestamp is after the last timestamp
@@ -40,12 +43,13 @@ class Data:
         return
 
     def remove_ticker_data(self, ticker: str) -> None:
+        """ Removes a ticker. """
         # Delete's all rows in self.dataframe where ticker == ticker
         self.dataframe = self.dataframe[self.dataframe.ticker != ticker]
         return
 
-
     def get_data_for_datetime(self, datetime_str):
+        """ Returns closest data points to given timestamp. """
         # Convert the input string to a pandas datetime object
         datetime = pd.to_datetime(datetime_str)
 
